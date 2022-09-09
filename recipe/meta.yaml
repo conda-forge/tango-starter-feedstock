@@ -1,5 +1,5 @@
 {% set name = "tango-starter" %}
-{% set version = "7.7" %}
+{% set version = "7.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://gitlab.com/tango-controls/starter/-/archive/Starter-{{ version }}/starter-Starter-{{ version }}.tar.gz
-  sha256: 564128fba6056dbbcd8b872c98b5a8a41832640dc4dc66db3364e9e2b5a46c5d
+  sha256: e5b25e70700d46ab23cc5002a292e1e631f06d28b1c8d1eea23010faea0a886e
 
 build:
   number: 0
@@ -34,7 +34,7 @@ about:
   home: https://www.tango-controls.org
   license: GPL-3.0-or-later
   license_file: LICENSE
-  summary: 'Device server to control Tango components'
+  summary: Device server to control Tango components
   description: |
     Tango-Controls is a software toolkit for building control systems.
     This device server is able to control Tango components (database, device servers, clients...).
