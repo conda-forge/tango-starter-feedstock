@@ -1,0 +1,4 @@
+# Build packages both for cpptango 9.3 and 9.4
+cpptango:
+  - 9.3    # [linux or win]
+  - 9.4
