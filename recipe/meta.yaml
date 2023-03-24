@@ -13,6 +13,9 @@ source:
 
 build:
   number: 0
+  # Starter doesn't work on macOS
+  # See https://gitlab.com/tango-controls/starter/-/issues/18
+  skip: true  # [osx]
 
 requirements:
   build:
