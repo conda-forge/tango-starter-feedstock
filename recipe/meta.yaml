@@ -8,28 +8,29 @@ package:
 source:
   url: https://gitlab.com/tango-controls/starter/-/archive/Starter-{{ version }}/starter-Starter-{{ version }}.tar.gz
   sha256: af51cc76ffd85c3023117f9d4bf720ea53174900f00f92a8ae02c70713566aee
+  patches:
+    - find-zeromq-win.patch
 
 build:
-  number: 1
-  skip: true  # [win]
+  number: 0
 
 requirements:
   build:
     - cmake
-    - make
+    - make                    # [unix]
     - {{ compiler('cxx') }}
-    - libtool
-    - pkg-config
+    - libtool                 # [unix]
+    - pkg-config              # [unix]
   host:
     - cppzmq
     - cpptango
-    - omniorb
     - omniorb-libs
 
 test:
   commands:
     # Starter --help returns 255
-    - Starter --help 2>&1 | grep usage
+    - Starter --help 2>&1 | grep usage         # [unix]
+    - Starter.exe --help 2>&1 | findstr usage  # [win]
 
 about:
   home: https://www.tango-controls.org
