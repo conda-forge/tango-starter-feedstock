@@ -8,8 +8,6 @@ package:
 source:
   url: https://gitlab.com/tango-controls/starter/-/archive/Starter-{{ version }}/starter-Starter-{{ version }}.tar.gz
   sha256: ed108c2df5b61bafb005d459fb7e17b068bdbf1d0dd44492e6b07d350abc496f
-  patches:
-    - cmake-macos.patch
 
 build:
   number: 0
