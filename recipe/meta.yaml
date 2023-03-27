@@ -8,14 +8,12 @@ package:
 source:
   url: https://gitlab.com/tango-controls/starter/-/archive/Starter-{{ version }}/starter-Starter-{{ version }}.tar.gz
   sha256: ed108c2df5b61bafb005d459fb7e17b068bdbf1d0dd44492e6b07d350abc496f
-  patches:
-    - find-zeromq-win.patch
 
 build:
   number: 0
   # Starter doesn't work on macOS
   # See https://gitlab.com/tango-controls/starter/-/issues/18
-  skip: true  # [osx]
+  skip: true  # [not linux]
 
 requirements:
   build:
@@ -34,7 +32,6 @@ test:
   commands:
     # Starter --help returns 255
     - Starter --help 2>&1 | grep usage         # [unix]
-    - Starter.exe --help 2>&1 | findstr usage  # [win]
 
 about:
   home: https://www.tango-controls.org
