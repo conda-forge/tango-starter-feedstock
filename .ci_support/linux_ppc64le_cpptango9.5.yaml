@@ -5,7 +5,7 @@ channel_sources:
 channel_targets:
 - conda-forge main
 cpptango:
-- '9.3'
+- '9.5'
 cxx_compiler:
 - gxx
 cxx_compiler_version:
