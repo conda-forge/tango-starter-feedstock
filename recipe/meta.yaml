@@ -1,5 +1,5 @@
 {% set name = "tango-starter" %}
-{% set version = "8.1" %}
+{% set version = "8.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://gitlab.com/tango-controls/starter/-/archive/Starter-{{ version }}/starter-Starter-{{ version }}.tar.gz
-  sha256: b8c04d333e76ce280769a7f027469a3542e8b6cf427ab9513741561743b2272e
+  sha256: 4d6e9b4bc2ab0582c871d167fb6dae4db7d8aeeae5abd0bc0705c58c8b3d0b44
   patches:
     - find-zeromq-win.patch
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
