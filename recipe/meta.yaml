@@ -8,6 +8,8 @@ package:
 source:
   url: https://gitlab.com/tango-controls/starter/-/releases/Starter-{{ version }}/downloads/starter-with-submodules-Starter-{{ version }}.tar.gz
   sha256: 65546fd92087a0f233635af4b276bdf88e0b545a4ad9ac7728aec8de095c44c4
+  patches:                 # [win]
+    - find-zmq-435.patch   # [win]
 
 build:
   number: 0
