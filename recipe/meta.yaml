@@ -1,5 +1,5 @@
 {% set name = "tango-starter" %}
-{% set version = "8.3" %}
+{% set version = "8.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,8 +7,8 @@ package:
 
 source:
   url: https://gitlab.com/tango-controls/starter/-/releases/Starter-{{ version }}/downloads/starter-with-submodules-Starter-{{ version }}.tar.gz
-  sha256: 65546fd92087a0f233635af4b276bdf88e0b545a4ad9ac7728aec8de095c44c4
-  patches:                 # [win]
+  sha256: 4ff742da1ad8535cd14f013b58201e9753293e50a3f78f6649edd2606be0e6e5
+  patches:   # [win]
     - find-zmq-435.patch   # [win]
 
 build:
@@ -19,6 +19,7 @@ requirements:
     - cmake
     - make                    # [unix]
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - libtool                 # [unix]
     - pkg-config              # [unix]
   host:
