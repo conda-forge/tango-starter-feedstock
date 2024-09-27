@@ -12,7 +12,7 @@ source:
     - find-zmq-435.patch   # [win]
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -20,7 +20,6 @@ requirements:
     - make                    # [unix]
     - {{ compiler('cxx') }}
     - {{ stdlib("c") }}
-    - libtool                 # [unix]
     - pkg-config              # [unix]
   host:
     - cppzmq
