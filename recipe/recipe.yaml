@@ -1,0 +1,54 @@
+schema_version: 1
+
+context:
+  name: tango-starter
+  version: 8.4
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://gitlab.com/tango-controls/starter/-/releases/Starter-${{ version }}/downloads/starter-with-submodules-Starter-${{ version }}.tar.gz
+  sha256: 4ff742da1ad8535cd14f013b58201e9753293e50a3f78f6649edd2606be0e6e5
+  patches:
+    - if: win
+      then: find-zmq-435.patch
+
+build:
+  number: 2
+
+requirements:
+  build:
+    - ${{ compiler('cxx') }}
+    - ${{ stdlib("c") }}
+    - cmake
+    - if: unix
+      then:
+        - make
+        - pkg-config
+  host:
+    - cppzmq
+    - cpptango
+    - omniorb-libs
+
+tests:
+  - script:
+      - if: win
+        then: Starter.exe --help 2>&1 | findstr /i usage
+        else: Starter --help 2>&1 | grep -i usage
+
+about:
+  license: GPL-3.0-or-later
+  license_file: LICENSE
+  summary: Device server to control Tango components
+  description: |
+    Tango-Controls is a software toolkit for building control systems.
+    This device server is able to control Tango components (database, device servers, clients...).
+    It is able to start or stop and to report the status of these components.
+  homepage: https://www.tango-controls.org
+  repository: https://gitlab.com/tango-controls/starter
+
+extra:
+  recipe-maintainers:
+    - beenje
