@@ -11,7 +11,7 @@ package:
 source:
   url: https://gitlab.com/tango-controls/starter/-/releases/Starter-${{ version }}/downloads/starter-with-submodules-Starter-${{ version }}.tar.gz
   sha256: 4ff742da1ad8535cd14f013b58201e9753293e50a3f78f6649edd2606be0e6e5
-  patches:  # [win]
+  patches:
     - if: win
       then: find-zmq-435.patch
 
@@ -20,13 +20,13 @@ build:
 
 requirements:
   build:
-    - cmake
-    - if: unix
-      then: make
     - ${{ compiler('cxx') }}
     - ${{ stdlib("c") }}
+    - cmake
     - if: unix
-      then: pkg-config
+      then:
+        - make
+        - pkg-config
   host:
     - cppzmq
     - cpptango
@@ -34,10 +34,9 @@ requirements:
 
 tests:
   - script:
-      - if: unix
-        then: Starter --help 2>&1 | grep usage
       - if: win
-        then: Starter.exe --help 2>&1 | findstr usage
+        then: Starter.exe --help 2>&1 | findstr /i usage
+        else: Starter --help 2>&1 | grep -i usage
 
 about:
   license: GPL-3.0-or-later
