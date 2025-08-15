@@ -3,7 +3,7 @@ About tango-starter-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tango-starter-feedstock/blob/main/LICENSE.txt)
 
-Home: https://www.tango-controls.org
+Home: https://www.tango-controls.org/
 
 Package license: GPL-3.0-or-later
 
@@ -14,7 +14,6 @@ Development: https://gitlab.com/tango-controls/starter
 Tango-Controls is a software toolkit for building control systems.
 This device server is able to control Tango components (database, device servers, clients...).
 It is able to start or stop and to report the status of these components.
-
 
 Current build status
 ====================
@@ -38,6 +37,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14197&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-starter-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cpptango10.0" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_64_cpptango10.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14197&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-starter-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_cpptango10.1" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -69,6 +75,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>linux_aarch64_cpptango10.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14197&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-starter-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_aarch64_cpptango10.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>linux_aarch64_cpptango9.3</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14197&branchName=main">
@@ -94,6 +107,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14197&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-starter-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_cpptango10.0" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>linux_ppc64le_cpptango10.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14197&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-starter-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_ppc64le_cpptango10.1" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -125,6 +145,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_64_cpptango10.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14197&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-starter-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_cpptango10.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_64_cpptango9.4</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14197&branchName=main">
@@ -146,6 +173,13 @@ Current build status
                 </a>
               </td>
             </tr><tr>
+              <td>osx_arm64_cpptango10.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14197&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-starter-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_cpptango10.1" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
               <td>osx_arm64_cpptango9.4</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14197&branchName=main">
@@ -164,6 +198,13 @@ Current build status
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14197&branchName=main">
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-starter-feedstock?branchName=main&jobName=win&configuration=win%20win_64_cpptango10.0" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_cpptango10.1</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=14197&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/tango-starter-feedstock?branchName=main&jobName=win&configuration=win%20win_64_cpptango10.1" alt="variant">
                 </a>
               </td>
             </tr><tr>
