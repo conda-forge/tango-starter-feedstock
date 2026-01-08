@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: tango-starter
-  version: 8.4
+  version: "9.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,13 +10,13 @@ package:
 
 source:
   url: https://gitlab.com/tango-controls/starter/-/releases/Starter-${{ version }}/downloads/starter-with-submodules-Starter-${{ version }}.tar.gz
-  sha256: 4ff742da1ad8535cd14f013b58201e9753293e50a3f78f6649edd2606be0e6e5
+  sha256: 8c747abcacc53c6431d9c7a0c01f49f2810a7535685692846bc6055063c51c5f
   patches:
     - if: win
       then: find-zmq-435.patch
 
 build:
-  number: 2
+  number: 0
 
 requirements:
   build:
