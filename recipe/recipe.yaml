@@ -1,11 +1,10 @@
 schema_version: 1
 
 context:
-  name: tango-starter
   version: "9.0"
 
-package:
-  name: ${{ name|lower }}
+recipe:
+  name: tango-starter-split
   version: ${{ version }}
 
 source:
@@ -16,27 +15,68 @@ source:
       then: find-zmq-435.patch
 
 build:
-  number: 1
+  number: 2
 
-requirements:
-  build:
-    - ${{ compiler('cxx') }}
-    - ${{ stdlib("c") }}
-    - cmake
-    - if: unix
-      then:
-        - make
-        - pkg-config
-  host:
-    - cppzmq
-    - cpptango
-    - omniorb-libs
+outputs:
+  - staging:
+      name: tango-starter-build
+    requirements:
+      build:
+        - cmake
+        - ninja
+        - ${{ compiler('cxx') }}
+        - ${{ stdlib("c") }}
+        - if: unix
+          then:
+            - pkg-config
+      host:
+        - cppzmq
+        - cpptango
+        - omniorb-libs
+    build:
+      script:
+        file: build
 
-tests:
-  - script:
-      - if: win
-        then: Starter.exe --help 2>&1 | findstr /i usage
-        else: Starter --help 2>&1 | grep -i usage
+  - package:
+      name: tango-starter
+    inherit: tango-starter-build
+    build:
+      files:
+        - if: unix
+          then:
+            - bin/Starter
+          else:
+            - Library/bin/Starter.exe
+    tests:
+      - script:
+          - if: unix
+            then:
+              # Starter --help returns 255, so grep the stderr for test
+              - Starter --help 2>&1 | grep -i usage
+            else:
+              - Starter.exe --help 2>&1 | findstr /i usage
+
+  - package:
+      name: tango-starter-dbg
+    inherit:
+      from: tango-starter-build
+      run_exports: false
+    build:
+      skip:
+        - not linux
+      dynamic_linking:
+        # Prevent dbg file to be modified
+        # Will raise CRC mismatch otherwise!
+        binary_relocation: false
+      files:
+        - lib/debug/Starter.dbg
+    requirements:
+      run:
+        - ${{ pin_subpackage('tango-starter', exact=True) }}
+    tests:
+      - package_contents:
+          files:
+            - lib/debug/Starter.dbg
 
 about:
   license: GPL-3.0-or-later
@@ -50,5 +90,6 @@ about:
   repository: https://gitlab.com/tango-controls/starter
 
 extra:
+  feedstock-name: tango-starter
   recipe-maintainers:
     - beenje

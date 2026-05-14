@@ -5,11 +5,11 @@
 
 [workspace]
 name = "tango-starter-feedstock"
-version = "3.55.0"  # conda-smithy version used to generate this file
+version = "3.61.2"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/tango-starter-feedstock"
 authors = ["@conda-forge/tango-starter"]
 channels = ["conda-forge"]
-platforms = ["linux-64", "linux-aarch64", "linux-ppc64le", "osx-64", "win-64"]
+platforms = ["linux-64", "linux-aarch64", "osx-64", "osx-arm64", "win-64"]
 requires-pixi = ">=0.59.0"
 
 [dependencies]
@@ -47,18 +47,6 @@ description = "Build tango-starter-feedstock with variant linux_64_cpptango9.3 d
 [tasks."inspect-linux_64_cpptango9.3"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_cpptango9.3.yaml"
 description = "List contents of tango-starter-feedstock packages built for variant linux_64_cpptango9.3"
-[tasks."build-linux_64_cpptango9.4"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_cpptango9.4.yaml"
-description = "Build tango-starter-feedstock with variant linux_64_cpptango9.4 directly (without setup scripts)"
-[tasks."inspect-linux_64_cpptango9.4"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_cpptango9.4.yaml"
-description = "List contents of tango-starter-feedstock packages built for variant linux_64_cpptango9.4"
-[tasks."build-linux_64_cpptango9.5"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_cpptango9.5.yaml"
-description = "Build tango-starter-feedstock with variant linux_64_cpptango9.5 directly (without setup scripts)"
-[tasks."inspect-linux_64_cpptango9.5"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_cpptango9.5.yaml"
-description = "List contents of tango-starter-feedstock packages built for variant linux_64_cpptango9.5"
 [tasks."build-linux_aarch64_cpptango10.0"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_cpptango10.0.yaml"
 description = "Build tango-starter-feedstock with variant linux_aarch64_cpptango10.0 directly (without setup scripts)"
@@ -83,54 +71,6 @@ description = "Build tango-starter-feedstock with variant linux_aarch64_cpptango
 [tasks."inspect-linux_aarch64_cpptango9.3"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_cpptango9.3.yaml"
 description = "List contents of tango-starter-feedstock packages built for variant linux_aarch64_cpptango9.3"
-[tasks."build-linux_aarch64_cpptango9.4"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_cpptango9.4.yaml"
-description = "Build tango-starter-feedstock with variant linux_aarch64_cpptango9.4 directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_cpptango9.4"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_cpptango9.4.yaml"
-description = "List contents of tango-starter-feedstock packages built for variant linux_aarch64_cpptango9.4"
-[tasks."build-linux_aarch64_cpptango9.5"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_cpptango9.5.yaml"
-description = "Build tango-starter-feedstock with variant linux_aarch64_cpptango9.5 directly (without setup scripts)"
-[tasks."inspect-linux_aarch64_cpptango9.5"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_cpptango9.5.yaml"
-description = "List contents of tango-starter-feedstock packages built for variant linux_aarch64_cpptango9.5"
-[tasks."build-linux_ppc64le_cpptango10.0"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_cpptango10.0.yaml"
-description = "Build tango-starter-feedstock with variant linux_ppc64le_cpptango10.0 directly (without setup scripts)"
-[tasks."inspect-linux_ppc64le_cpptango10.0"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_cpptango10.0.yaml"
-description = "List contents of tango-starter-feedstock packages built for variant linux_ppc64le_cpptango10.0"
-[tasks."build-linux_ppc64le_cpptango10.1"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_cpptango10.1.yaml"
-description = "Build tango-starter-feedstock with variant linux_ppc64le_cpptango10.1 directly (without setup scripts)"
-[tasks."inspect-linux_ppc64le_cpptango10.1"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_cpptango10.1.yaml"
-description = "List contents of tango-starter-feedstock packages built for variant linux_ppc64le_cpptango10.1"
-[tasks."build-linux_ppc64le_cpptango10.3"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_cpptango10.3.yaml"
-description = "Build tango-starter-feedstock with variant linux_ppc64le_cpptango10.3 directly (without setup scripts)"
-[tasks."inspect-linux_ppc64le_cpptango10.3"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_cpptango10.3.yaml"
-description = "List contents of tango-starter-feedstock packages built for variant linux_ppc64le_cpptango10.3"
-[tasks."build-linux_ppc64le_cpptango9.3"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_cpptango9.3.yaml"
-description = "Build tango-starter-feedstock with variant linux_ppc64le_cpptango9.3 directly (without setup scripts)"
-[tasks."inspect-linux_ppc64le_cpptango9.3"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_cpptango9.3.yaml"
-description = "List contents of tango-starter-feedstock packages built for variant linux_ppc64le_cpptango9.3"
-[tasks."build-linux_ppc64le_cpptango9.4"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_cpptango9.4.yaml"
-description = "Build tango-starter-feedstock with variant linux_ppc64le_cpptango9.4 directly (without setup scripts)"
-[tasks."inspect-linux_ppc64le_cpptango9.4"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_cpptango9.4.yaml"
-description = "List contents of tango-starter-feedstock packages built for variant linux_ppc64le_cpptango9.4"
-[tasks."build-linux_ppc64le_cpptango9.5"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_cpptango9.5.yaml"
-description = "Build tango-starter-feedstock with variant linux_ppc64le_cpptango9.5 directly (without setup scripts)"
-[tasks."inspect-linux_ppc64le_cpptango9.5"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_cpptango9.5.yaml"
-description = "List contents of tango-starter-feedstock packages built for variant linux_ppc64le_cpptango9.5"
 [tasks."build-osx_64_cpptango10.0"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_cpptango10.0.yaml"
 description = "Build tango-starter-feedstock with variant osx_64_cpptango10.0 directly (without setup scripts)"
@@ -149,18 +89,6 @@ description = "Build tango-starter-feedstock with variant osx_64_cpptango10.3 di
 [tasks."inspect-osx_64_cpptango10.3"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_cpptango10.3.yaml"
 description = "List contents of tango-starter-feedstock packages built for variant osx_64_cpptango10.3"
-[tasks."build-osx_64_cpptango9.4"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_cpptango9.4.yaml"
-description = "Build tango-starter-feedstock with variant osx_64_cpptango9.4 directly (without setup scripts)"
-[tasks."inspect-osx_64_cpptango9.4"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_cpptango9.4.yaml"
-description = "List contents of tango-starter-feedstock packages built for variant osx_64_cpptango9.4"
-[tasks."build-osx_64_cpptango9.5"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_cpptango9.5.yaml"
-description = "Build tango-starter-feedstock with variant osx_64_cpptango9.5 directly (without setup scripts)"
-[tasks."inspect-osx_64_cpptango9.5"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_cpptango9.5.yaml"
-description = "List contents of tango-starter-feedstock packages built for variant osx_64_cpptango9.5"
 [tasks."build-osx_arm64_cpptango10.0"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_cpptango10.0.yaml"
 description = "Build tango-starter-feedstock with variant osx_arm64_cpptango10.0 directly (without setup scripts)"
@@ -179,18 +107,6 @@ description = "Build tango-starter-feedstock with variant osx_arm64_cpptango10.3
 [tasks."inspect-osx_arm64_cpptango10.3"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_cpptango10.3.yaml"
 description = "List contents of tango-starter-feedstock packages built for variant osx_arm64_cpptango10.3"
-[tasks."build-osx_arm64_cpptango9.4"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_cpptango9.4.yaml"
-description = "Build tango-starter-feedstock with variant osx_arm64_cpptango9.4 directly (without setup scripts)"
-[tasks."inspect-osx_arm64_cpptango9.4"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_cpptango9.4.yaml"
-description = "List contents of tango-starter-feedstock packages built for variant osx_arm64_cpptango9.4"
-[tasks."build-osx_arm64_cpptango9.5"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_cpptango9.5.yaml"
-description = "Build tango-starter-feedstock with variant osx_arm64_cpptango9.5 directly (without setup scripts)"
-[tasks."inspect-osx_arm64_cpptango9.5"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_cpptango9.5.yaml"
-description = "List contents of tango-starter-feedstock packages built for variant osx_arm64_cpptango9.5"
 [tasks."build-win_64_cpptango10.0"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_cpptango10.0.yaml"
 description = "Build tango-starter-feedstock with variant win_64_cpptango10.0 directly (without setup scripts)"
@@ -209,18 +125,6 @@ description = "Build tango-starter-feedstock with variant win_64_cpptango10.3 di
 [tasks."inspect-win_64_cpptango10.3"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_cpptango10.3.yaml"
 description = "List contents of tango-starter-feedstock packages built for variant win_64_cpptango10.3"
-[tasks."build-win_64_cpptango9.4"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_cpptango9.4.yaml"
-description = "Build tango-starter-feedstock with variant win_64_cpptango9.4 directly (without setup scripts)"
-[tasks."inspect-win_64_cpptango9.4"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_cpptango9.4.yaml"
-description = "List contents of tango-starter-feedstock packages built for variant win_64_cpptango9.4"
-[tasks."build-win_64_cpptango9.5"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_cpptango9.5.yaml"
-description = "Build tango-starter-feedstock with variant win_64_cpptango9.5 directly (without setup scripts)"
-[tasks."inspect-win_64_cpptango9.5"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_cpptango9.5.yaml"
-description = "List contents of tango-starter-feedstock packages built for variant win_64_cpptango9.5"
 
 [feature.smithy.dependencies]
 conda-smithy = "*"
