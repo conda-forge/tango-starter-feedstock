@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "9.0"
+  version: "9.1"
 
 recipe:
   name: tango-starter-split
@@ -9,13 +9,13 @@ recipe:
 
 source:
   url: https://gitlab.com/tango-controls/starter/-/releases/Starter-${{ version }}/downloads/starter-with-submodules-Starter-${{ version }}.tar.gz
-  sha256: 8c747abcacc53c6431d9c7a0c01f49f2810a7535685692846bc6055063c51c5f
+  sha256: d60126d57df0c6007f21f5032bdf63065f38caca8958f682c6acb00f27c5295c
   patches:
     - if: win
       then: find-zmq-435.patch
 
 build:
-  number: 2
+  number: 0
 
 outputs:
   - staging:
